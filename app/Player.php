@@ -22,4 +22,9 @@ class Player extends Model
         // establishing the one to many relationship with the Team model
         return $this->belongsTo(Team::class);
     }
+
+    public function fullName()
+    {
+        return $this->first_name . " " . $this->last_name;
+    }
 }
