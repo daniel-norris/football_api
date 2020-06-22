@@ -54,8 +54,10 @@ class PlayerTest extends TestCase
         ]);
 
         $playerFromDB = Player::all()->first();
-
         $this->assertSame("Bob", $playerFromDB->first_name);
+
+        $teamFromDB = Team::all()->first();
+        $this->assertSame("Team 1", $teamFromDB->name);
 
     }
 }
