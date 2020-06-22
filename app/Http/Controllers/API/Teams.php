@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Team;
+use App\Player;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -27,7 +28,8 @@ class Teams extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        return Team::create($data);
     }
 
     /**

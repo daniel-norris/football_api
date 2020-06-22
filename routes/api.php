@@ -25,5 +25,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get("/teams", [Teams::class, "index"]);
 
+Route::post("/teams", [Teams::class, "store"]);
+
+
 Route::get("/players", [Players::class, "index"]);
 
