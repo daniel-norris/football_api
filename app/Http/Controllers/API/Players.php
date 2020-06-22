@@ -7,8 +7,11 @@ use App\Player;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-// uses PlayerRequest to validate POST data
+// using PlayerRequest to validate POST data
 use App\Http\Requests\API\PlayerRequest;
+
+// using PlayerResource to control GET data requests
+use App\Http\Resources\API\PlayerResource;
 
 class Players extends Controller
 {
@@ -19,7 +22,7 @@ class Players extends Controller
      */
     public function index()
     {
-        return Player::all();
+        return PlayerResource::collection(Player::all());
     }
 
     /**
@@ -31,7 +34,8 @@ class Players extends Controller
     public function store(PlayerRequest $request)
     {
         $data = $request->all();
-        return Player::create($data);
+        $player = Player::create($data);
+        return new PlayerResource($player);
     }
 
     /**
