@@ -4,9 +4,11 @@ namespace App\Http\Controllers\API;
 
 use App\Team;
 
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
+use App\Http\Requests\API\TeamRequest;
+use App\Http\Resources\API\TeamResource;
 
 class Teams extends Controller
 {
@@ -17,7 +19,7 @@ class Teams extends Controller
      */
     public function index()
     {
-        return Team::all();
+        return TeamResource::collection(Team::all());
     }
 
     /**
@@ -26,10 +28,11 @@ class Teams extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TeamRequest $request)
     {
         $data = $request->all();
-        return Team::create($data);
+        $team = Team::create($data);
+        return new TeamResource($team);
     }
 
     /**
