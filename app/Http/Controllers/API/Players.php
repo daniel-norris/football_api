@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Team;
+use App\Player;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class Teams extends Controller
+class Players extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class Teams extends Controller
      */
     public function index()
     {
-        return Team::all();
+        return Player::all();
     }
 
     /**

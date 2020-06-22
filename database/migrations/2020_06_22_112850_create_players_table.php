@@ -19,12 +19,10 @@ class CreatePlayersTable extends Migration
             $table->string("last_name", 100);
             $table->integer("age");
             $table->integer("height");
-            $table->integer("weight");
             $table->string("position", 30);
-            $table->string("nationality", 50);
-            $table->integer("conceded_goals");
-            $table->integer("assists");
-            $table->integer("goals");
+            // creating a one-to-many relationship with the teams db table
+            $table->foreignId("team_id")->unsigned();
+            $table->foreign("team_id")->references("id")->on("teams")->onDelete("cascade");
             $table->timestamps();
         });
     }

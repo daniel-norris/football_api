@@ -2,6 +2,8 @@
 
 // using the teams controller
 use App\Http\Controllers\API\Teams;
+use App\Http\Controllers\API\Drafts;
+use App\Http\Controllers\API\Players;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +24,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get("/teams", [Teams::class, "index"]);
+
+Route::get("/players", [Players::class, "index"]);
+
