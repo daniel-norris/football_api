@@ -7,6 +7,9 @@ use App\Player;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+// uses PlayerRequest to validate POST data
+use App\Http\Requests\API\PlayerRequest;
+
 class Players extends Controller
 {
     /**
@@ -25,7 +28,7 @@ class Players extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PlayerRequest $request)
     {
         $data = $request->all();
         return Player::create($data);
