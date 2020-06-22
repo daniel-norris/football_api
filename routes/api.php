@@ -1,5 +1,8 @@
 <?php
 
+// using the teams controller
+use App\Http\Controllers\API\Teams;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +20,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get("/teams", [Teams::class, "index"]);
