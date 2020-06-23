@@ -29,10 +29,23 @@ class Games extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Game $game)
     {
         $gameData = $request->all();
-        return Game::create($gameData);
+        $newGame = Game::create($gameData);
+
+        $newGame->teams()->createMany([
+            [
+                "name" => "asdfasdf",
+                "side" => 1,
+                "game_id" => $game->id,
+            ],
+            [
+                "name" => "cvbxcbv",
+                "side" => 2,
+                "game_id" => $game->id,
+            ],
+        ]);
     }
 
     /**
