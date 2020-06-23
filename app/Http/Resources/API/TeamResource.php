@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources\API;
 
+
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class TeamResource extends JsonResource
@@ -17,6 +18,7 @@ class TeamResource extends JsonResource
         return [
             "id" => $this->id,
             "name" => $this->name,
+            "players" => $this->players()->get(),
         ];
     }
 }

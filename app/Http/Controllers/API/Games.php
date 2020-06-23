@@ -6,6 +6,7 @@ use App\Game;
 use App\Team;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\API\GameRequest;
 use App\Http\Resources\API\GameResource;
 
 use Illuminate\Http\Request;
@@ -30,8 +31,8 @@ class Games extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        return Game::create($data);
+        $gameData = $request->all();
+        return Game::create($gameData);
     }
 
     /**

@@ -2,6 +2,8 @@
 
 namespace App\Http\Resources\API;
 
+use App\Http\Resources\API\TeamResource;
+
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class GameResource extends JsonResource
@@ -17,8 +19,9 @@ class GameResource extends JsonResource
         return [
             "id" => $this->id,
             "players_per_side" => $this->players_side,
-            "team_1" => $this->teams()->find(1),
-            "team_2" => $this->teams()->find(3),
+            "winner" => "",
+            "team_1" => new TeamResource($this->teams()->firstWhere("side", 1)),
+            "team_2" => new TeamResource($this->teams()->firstWhere("side", 2)),
         ];
     }
 }
