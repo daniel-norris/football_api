@@ -19,6 +19,7 @@ class CreatePlayersTable extends Migration
             $table->string("last_name", 100);
             $table->integer("age");
             $table->integer("height");
+            $table->enum('skill', [1, 2, 3, 4, 5]);
             $table->string("position", 30);
             // creating a one-to-many relationship with the teams db table
             $table->foreignId("team_id")->unsigned();

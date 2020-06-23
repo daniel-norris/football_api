@@ -13,6 +13,7 @@ class Player extends Model
         "last_name",
         "age",
         "height",
+        "skill",
         "position",
         "team_id",
     ];
