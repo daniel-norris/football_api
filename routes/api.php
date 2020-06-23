@@ -27,6 +27,7 @@ Route::get("/teams", [Teams::class, "index"]);
 
 Route::post("/teams", [Teams::class, "store"]);
 
+Route::post("/games", [Games::class, "store"]);
 
 Route::get("/players", [Players::class, "index"]);
 
