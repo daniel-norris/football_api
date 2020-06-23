@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Game;
+use App\Team;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -27,7 +28,8 @@ class Games extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        return Game::create($data);
     }
 
     /**
