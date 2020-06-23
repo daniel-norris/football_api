@@ -25,6 +25,8 @@ class GameRequest extends FormRequest
     {
         return [
             "players_side" => ["required", "integer"],
+            "team_1" => ["required", "string"],
+            "team_2" => ["required", "string"],
         ];
     }
 }
