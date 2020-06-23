@@ -6,6 +6,8 @@ use App\Game;
 use App\Team;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\API\GameResource;
+
 use Illuminate\Http\Request;
 
 class Games extends Controller
@@ -17,7 +19,7 @@ class Games extends Controller
      */
     public function index()
     {
-        return Game::all();
+        return GameResource::collection(Game::all());
     }
 
     /**

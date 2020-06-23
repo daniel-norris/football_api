@@ -4,6 +4,7 @@
 use App\Http\Controllers\API\Teams;
 use App\Http\Controllers\API\Drafts;
 use App\Http\Controllers\API\Players;
+use App\Http\Controllers\API\Games;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;

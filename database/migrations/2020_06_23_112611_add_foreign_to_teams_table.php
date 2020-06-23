@@ -28,6 +28,7 @@ class AddForeignToTeamsTable extends Migration
     public function down()
     {
         Schema::table('teams', function (Blueprint $table) {
+            $table->dropForeign(['game_id']);
             $table->dropColumn("game_id");
         });
     }
