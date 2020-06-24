@@ -5,7 +5,7 @@ namespace App\Http\Resources\API;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-use App\Http\Resources\API\PlayerResource;
+use App\Http\Resources\API\PlayerCollectionResource;
 
 class TeamResource extends JsonResource
 {
@@ -20,7 +20,7 @@ class TeamResource extends JsonResource
         return [
             "id" => $this->id,
             "name" => $this->name,
-            "players" => PlayerResource::collection($this->players()->get()),
+            "players" => PlayerCollectionResource::collection($this->players()->get()),
         ];
     }
 }
