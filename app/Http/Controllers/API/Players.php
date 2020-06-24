@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Player;
+use App\Team;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -31,11 +32,20 @@ class Players extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PlayerRequest $request)
+    public function store(Request $request)
     {
-        $data = $request->all();
-        $player = Player::create($data);
-        return new PlayerResource($player);
+        foreach($request->players as $player)
+        {
+            Player::create([
+                "first_name" => $player['first_name'],
+                "last_name" => $player['last_name'],
+                "age" => $player['age'],
+                "skill" => 3,
+                "height" => $player['height'],
+                "position" => $player['position'],
+                "team_id" => $player['team_id'],
+            ]);
+        }
     }
 
     /**
