@@ -37,11 +37,11 @@ class Players extends Controller
         foreach($request->players as $player)
         {
             Player::create([
-                "first_name" => $player['first_name'],
-                "last_name" => $player['last_name'],
+                "first_name" => $player['first'],
+                "last_name" => $player['last'],
                 "age" => $player['age'],
                 "skill" => 3,
-                "height" => $player['height'],
+                "height" => 175,
                 "position" => $player['position'],
                 "team_id" => $player['team_id'],
             ]);
