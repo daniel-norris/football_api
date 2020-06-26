@@ -24,11 +24,12 @@ class PlayerRequest extends FormRequest
     public function rules()
     {
         return [
-            "first_name" => ["required", "string"],
-            "last_name" => ["required", "string"],
+            "first" => ["required", "string"],
+            "last" => ["required", "string"],
             "age" => ["required", "integer"],
             "position" => ["required", "string"],
             "skill" => ["required", "integer"],
+            "team_id" => ["required", "integer"],
         ];
     }
 }
