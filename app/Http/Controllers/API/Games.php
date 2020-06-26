@@ -58,7 +58,8 @@ class Games extends Controller
      */
     public function show($id)
     {
-        //
+        $game = Game::find($id);
+        return new GameResource($game);
     }
 
     /**

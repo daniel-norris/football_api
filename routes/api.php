@@ -30,6 +30,8 @@ Route::post("/teams", [Teams::class, "store"]);
 
 Route::get("/games", [Games::class, "index"]);
 
+Route::get("/games/{id}", [Games::class, "show"]);
+
 Route::post("/games", [Games::class, "store"]);
 
 Route::get("/players", [Players::class, "index"]);
