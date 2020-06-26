@@ -16,6 +16,8 @@ class PlayerResource extends JsonResource
     {
         return [
             "id" => $this->id,
+            "first_name" => ucfirst($this->first_name),
+            "last_name" => ucfirst($this->last_name),
             "full_name" => $this->fullName(),
             "skill" => $this->skill,
             "age" => $this->age,

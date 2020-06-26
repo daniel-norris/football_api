@@ -25,6 +25,6 @@ class Player extends Model
 
     public function fullName()
     {
-        return $this->first_name . " " . $this->last_name;
+        return ucfirst($this->first_name) . " " . ucfirst($this->last_name);
     }
 }
