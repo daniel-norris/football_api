@@ -27,7 +27,6 @@ class PlayerRequest extends FormRequest
             "first_name" => ["required", "string"],
             "last_name" => ["required", "string"],
             "age" => ["required", "integer"],
-            "height" => ["required", "integer"],
             "position" => ["required", "string"],
             "skill" => ["required", "integer"],
         ];

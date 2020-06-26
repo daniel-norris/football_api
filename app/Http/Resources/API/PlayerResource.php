@@ -19,7 +19,6 @@ class PlayerResource extends JsonResource
             "full_name" => $this->fullName(),
             "skill" => $this->skill,
             "age" => $this->age,
-            "height" => $this->height,
             "position" => $this->position,
         ];
     }
