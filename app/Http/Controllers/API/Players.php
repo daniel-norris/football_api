@@ -32,7 +32,7 @@ class Players extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PlayerRequest $request)
     {
         foreach($request->players as $player)
         {
@@ -41,7 +41,6 @@ class Players extends Controller
                 "last_name" => $player['last'],
                 "age" => $player['age'],
                 "skill" => $player['skill'],
-                "height" => 175,
                 "position" => $player['position'],
                 "team_id" => $player['team_id'],
             ]);
