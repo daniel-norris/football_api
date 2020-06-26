@@ -22,15 +22,15 @@ class PlayerTest extends TestCase
         parent::setUp();
 
         $this->player = new Player([
-            "first_name" => "Bob",
-            "last_name" => "Smith",
+            "first_name" => "bob",
+            "last_name" => "smith",
         ]);
     }
 
     public function testFillable()
     {
-        $this->assertSame("Bob", $this->player->first_name);
-        $this->assertSame("Smith", $this->player->last_name);
+        $this->assertSame("bob", $this->player->first_name);
+        $this->assertSame("smith", $this->player->last_name);
     }
 
     public function testFullName()
@@ -41,7 +41,9 @@ class PlayerTest extends TestCase
     public function testDatabase()
     {
         Team::create([
-            "name" => "Team 1"
+            "name" => "Team 1",
+            "side" => 1,
+            "game_id" => 1
         ]);
 
         Player::create([

@@ -21,7 +21,7 @@ class TeamResource extends JsonResource
         return [
             "id" => $this->id,
             "name" => $this->name,
-            "players" => new PlayerResource($this->players()->get()),
+            "players" => PlayerResource::collection($this->players()->get()),
             // "players" => PlayerCollectionResource::collection($this->players()->get()),
         ];
     }
