@@ -20,7 +20,7 @@ class TeamResource extends JsonResource
     {
         return [
             "id" => $this->id,
-            "name" => $this->name,
+            "name" => ucfirst($this->name),
             "players" => PlayerResource::collection($this->players()->get()),
             // "players" => PlayerCollectionResource::collection($this->players()->get()),
         ];
