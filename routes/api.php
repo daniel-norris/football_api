@@ -1,5 +1,11 @@
 <?php
 
+// using the teams controller
+use App\Http\Controllers\API\Teams;
+use App\Http\Controllers\API\Drafts;
+use App\Http\Controllers\API\Players;
+use App\Http\Controllers\API\Games;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +23,13 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get("/teams", [Teams::class, "index"]);
+Route::post("/teams", [Teams::class, "store"]);
+
+Route::get("/games", [Games::class, "index"]);
+Route::get("/games/{id}", [Games::class, "show"]);
+Route::post("/games", [Games::class, "store"]);
+
+Route::get("/players", [Players::class, "index"]);
+Route::post("/players", [Players::class, "store"]);
