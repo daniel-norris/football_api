@@ -22,7 +22,11 @@ class TeamResource extends JsonResource
             "id" => $this->id,
             "name" => ucfirst($this->name),
             "players" => PlayerResource::collection($this->players()->get()),
-            // "players" => PlayerCollectionResource::collection($this->players()->get()),
+            /**
+             *  alternative player collection resource returns a truncated array of player data
+             * "players" => PlayerCollectionResource::collection($this->players()->get()),
+             */
+
         ];
     }
 }

@@ -19,7 +19,8 @@ class GameResource extends JsonResource
         return [
             "id" => $this->id,
             "players_per_side" => $this->players_side,
-            "winner" => "",
+            "winner" => 0,
+            // team resources are altering how the api is displaying these 1-2-many relationships on response
             "team_1" => new TeamResource($this->teams()->firstWhere("side", 1)),
             "team_2" => new TeamResource($this->teams()->firstWhere("side", 2)),
         ];

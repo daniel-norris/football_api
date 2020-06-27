@@ -34,6 +34,7 @@ class Games extends Controller
         $gameData = $request->all();
         $newGame = Game::create($gameData);
 
+        // create a game model and two associated teams at the same time
         $newGame->teams()->createMany([
             [
                 "name" => $request->team_1,

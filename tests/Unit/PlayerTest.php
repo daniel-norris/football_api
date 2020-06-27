@@ -17,6 +17,7 @@ class PlayerTest extends TestCase
 
     private $player;
 
+    // setting up test variables
     public function setUp() : void
     {
         parent::setUp();
@@ -27,17 +28,20 @@ class PlayerTest extends TestCase
         ]);
     }
 
+    // testing fillable fields for players
     public function testFillable()
     {
         $this->assertSame("bob", $this->player->first_name);
         $this->assertSame("smith", $this->player->last_name);
     }
 
+    // testing full name method for players
     public function testFullName()
     {
         $this->assertSame("Bob Smith", $this->player->fullName());
     }
 
+    // test that data is entered and retrieved from db
     public function testDatabase()
     {
         Team::create([

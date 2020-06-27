@@ -34,6 +34,7 @@ class Players extends Controller
      */
     public function store(Request $request)
     {
+        // create multiple players simultaneously
         foreach($request->players as $player)
         {
             Player::create([
