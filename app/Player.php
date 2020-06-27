@@ -23,6 +23,7 @@ class Player extends Model
         return $this->belongsTo(Team::class);
     }
 
+    // creating a full name method to return the first and last name fields concatenated
     public function fullName()
     {
         return ucfirst($this->first_name) . " " . ucfirst($this->last_name);
