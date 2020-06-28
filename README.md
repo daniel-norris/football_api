@@ -19,3 +19,5 @@ It's up to you how you implement this, with JavaScript, React, or PHP, as a web 
 Some optional advanced features might include:
 support for n-a-side, where a list of any length can be split into two teams
 support for balancing of the teams, where some measure of each players strength is used to allocate teams fairly
+
+[Plan](https://dannorris.atlassian.net/wiki/display/~724717840/viewpage.action?pageId=196611&atlOrigin=eyJpIjoiZTdhYzMyOWZkYTJiNDkyYzhjNmM4MzJkZTVjZDk1MWMiLCJwIjoiYyJ9)
