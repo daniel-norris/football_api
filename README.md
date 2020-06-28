@@ -1,6 +1,6 @@
 # FooDraft 	⚽
 
-![activity](https://img.shields.io/github/commit-activity/m/daniel-norris/football_app) ![stars](https://img.shields.io/github/stars/daniel-norris/football_app) ![twitter](https://img.shields.io/twitter/follow/danielpnorris?style=social)
+![activity](https://img.shields.io/github/commit-activity/m/daniel-norris/football_api) ![stars](https://img.shields.io/github/stars/daniel-norris/football_api) ![twitter](https://img.shields.io/twitter/follow/danielpnorris?style=social)
 
 ![screenshot](screenshot.PNG)
 
@@ -14,7 +14,6 @@ Detailed documentation is available on Confluence and it's recommended that you 
 
 Alternatively, `.pdf` and `.doc` is also available but is not optimised and are missing all wireframes.
 
-<<<<<<< HEAD
 [Docs - PDF](https://github.com/daniel-norris/football_app/blob/master/FooDraft.pdf)
 
 [Docs - Doc](https://github.com/daniel-norris/football_app/blob/master/FooDraft.doc)
@@ -171,10 +170,3 @@ Then update your .axios file in the root directory.
 - Introducing affiliate links enabling users to place similar predictions with affiliated betting partners
 - Introducing affiliate links enabling users to purchase merchandise from  affiliated premiership football clubs
 - Introducing a subscription system…
-=======
-Some optional advanced features might include:
-support for n-a-side, where a list of any length can be split into two teams
-support for balancing of the teams, where some measure of each players strength is used to allocate teams fairly
-
-[Plan](https://dannorris.atlassian.net/wiki/display/~724717840/viewpage.action?pageId=196611&atlOrigin=eyJpIjoiZTdhYzMyOWZkYTJiNDkyYzhjNmM4MzJkZTVjZDk1MWMiLCJwIjoiYyJ9)
->>>>>>> 7d5b31538af698b6e1882228be1f9e93bff2575d
