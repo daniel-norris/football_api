@@ -4,6 +4,8 @@
 
 ![screenshot](screenshot.PNG)
 
+#### View live (here)[https://daniel-norris.github.io/football_app/#/].
+
 Enabling you and friends to draft, select, randomise and predict the probability of winning a football game of team sizes between 1 - 9 players.
 
 ## Documentation
